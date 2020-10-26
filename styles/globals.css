@@ -4,13 +4,173 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fffaf0;
+  height: 300vh !important;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.scrolled {
+  padding-top: 0 !important;
+  transition-duration: 0.5s;
 }
 
-* {
-  box-sizing: border-box;
+.scrolled .h5 {
+  padding-top: 0 !important;
+  transition-duration: 0.5s;
+}
+
+.scroll {
+  transition-duration: 0.5s;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.inactive {
+  background-color: none;
+  color: gray !important;
+}
+.activated {
+  background-color: black;
+  color: white !important;
+  padding: 10px;
+  border-radius: 15% !important;
+}
+
+h5 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.home-bg {
+  width: 100%;
+  height: 100%;
+  background: black;
+  background: #fffaf0; /* fallback colour. Make sure this is just one solid colour. */
+  background: linear-gradient(#fffaf0, #fffaf040 30%), url('/bg1.jpg'); /* The least supported option. */
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 960px) {
+  .menu {
+    margin-right: 20px !important;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 150px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.2s ease;
+  }
+
+  .fa-times:before {
+    margin: 2px;
+  }
+
+  .nav-menu.active {
+    background: #fffaf0;
+    top: 150px;
+    opacity: 1;
+    transition: all 0.2s linear;
+    z-index: 1;
+    box-shadow: 0 4px 9px -8px black;
+    left: 0;
+    opacity: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #feebc8;
+    border-radius: 0;
+  }
+
+  .menu-icon {
+    display: block;
+
+    cursor: pointer;
+  }
+
+  .css-82ddui {
+    padding: 0 !important;
+  }
+
+  .logo {
+    padding-left: 85px !important;
+  }
+}
+
+.fab {
+  line-height: 1.3;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .mobile-shop {
+    display: none !important;
+    transition-duration: 0.3s;
+  }
+
+  .fa-shopping-cart {
+    padding-left: 40px !important;
+    transition-duration: 0.3s;
+  }
+  .nav-margin {
+    margin: 0 10px !important;
+    transition-duration: 0.3s;
+  }
+  .logo {
+    margin-left: -30px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .fa-shopping-cart {
+    margin-left: -30px !important;
+  }
+  .menu-icon {
+    padding-right: 0px !important;
+  }
+  .logo {
+    padding-left: 50px !important;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .menu-icon,
+  .fa-shopping-cart {
+    display: none !important;
+  }
+
+  .logo {
+    font-size: 4vh !important;
+    transition-duration: 0.3s;
+  }
+
+  .fb-like {
+    display: none !important;
+  }
+}
+
+.hidden {
+  transform: translateY(-100%);
+  margin-bottom: -40px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.fb-like {
+  transition: all 0.3s ease-in-out;
 }
