@@ -126,7 +126,7 @@ function Header() {
         </Flex>
       </Flex>
       <Container
-        bg='#FFFAF090'
+        bg='#FFFAF0'
         w='100%'
         position='fixed'
         pt='50px'

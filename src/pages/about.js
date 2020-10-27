@@ -3,22 +3,24 @@ import { Box, Flex, Heading, Image } from '@chakra-ui/core'
 function Home() {
   return (
     <>
-      <Box minH='80vh' h='100%' m='auto' w='80%' pt='90px'>
-        <Flex flexDirection={['column', 'column', 'column', 'column', 'row']}>
+      <Box minH='80vh' h='100%' m='auto' w='90%' pt='90px'>
+        <Flex flexDirection={['column', 'column', 'column', 'row', 'row']}>
           <Flex flexDirection='column' pt='50px' m='auto'>
             <Flex
               m='auto'
+              pb='70px'
               flexDirection={['column', 'column', 'row', 'row', 'row']}
             >
-              <Image
-                m={3}
-                src='/img8.jpg'
-                w='700px'
-                h='500px'
-                borderRadius='10px'
-                border='5px solid white'
-                boxShadow='0 0 10px -3px black'
-              />
+              <Box
+                maxW='90%'
+                h='auto'
+                rounded='20px'
+                overflow='hidden'
+                boxShadow='2xl'
+                m='auto'
+              >
+                <Image src='/lasagna.jpg' display='inherit' />
+              </Box>
             </Flex>
           </Flex>
           <Box
@@ -28,17 +30,14 @@ function Home() {
               '100%', // base
               '100%', // 480px upwards
               '100%',
-              '100%', // 768px upwards
+              '50%', // 768px upwards
               '50%', // 992px upwards
             ]}
-            px='20px'
           >
             <Heading
-              as='h1'
-              size='2xl'
-              textAlign={['center', 'center', 'center', 'center', 'left']}
+              textAlign={['center', 'center', 'center', 'left', 'left']}
               fontFamily='Cherry Swash'
-              fontSize='5vh'
+              fontSize='5vw'
               fontWeight='900'
               letterSpacing='5px'
             >
@@ -51,21 +50,19 @@ function Home() {
               letterSpacing='2px'
               as='h6'
               size='sm'
-              textAlign={['center', 'center', 'center', 'center', 'left']}
+              textAlign={['center', 'center', 'center', 'left', 'left']}
               fontFamily='Cherry Swash'
               fontSize='1rem'
               fontWeight='none'
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />{' '}
-              Sed sagittis pretium massa, ac pellentesque augue bibendum sit
-              <br /> amet. Duis placerat ornare suscipit. Nunc nec velit dictum,
-              <br /> auctor lectus vel, imperdiet dui. Class aptent taciti
-              sociosqu
-              <br /> ad litora torquent per conubia nostra, per inceptos
-              himenaeos.
-              <br /> Pellentesque
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              sagittis pretium massa, ac pellentesque augue bibendum sit amet.
+              Duis placerat ornare suscipit. Nunc nec velit dictum, auctor
+              lectus vel, imperdiet dui. Class aptent taciti sociosqu ad litora
+              torquent per conubia nostra, per inceptos himenaeos. Pellentesque
             </Heading>
           </Box>
+          <Box mt='auto' id='products'></Box>
         </Flex>
       </Box>
     </>

@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #fffaf0;
-  height: 300vh !important;
+  height: 450vh !important;
   scroll-behavior: smooth;
 }
 
@@ -54,6 +54,16 @@ h5 {
   background-position: center;
 }
 
+.add-to-cart {
+  background: black;
+  background: #fffaf0; /* fallback colour. Make sure this is just one solid colour. */
+  background: linear-gradient(#fffaf0, #fffaf040 30%), url('/lasagna.jpg') fixed; /* The least supported option. */
+  background-size: cover;
+  width: 100%;
+
+  position: relative;
+}
+
 @media screen and (max-width: 960px) {
   .menu {
     margin-right: 20px !important;
@@ -62,13 +72,14 @@ h5 {
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 50vh;
+    width: 80%;
+    height: 300vh;
     position: absolute;
-    top: 150px;
-    left: -100%;
+    top: -40px;
+    right: -100%;
     opacity: 1;
     transition: all 0.2s ease;
+    padding-top: 100px;
   }
 
   .fa-times:before {
@@ -77,13 +88,12 @@ h5 {
 
   .nav-menu.active {
     background: #fffaf0;
-    top: 150px;
+    top: -40px;
     opacity: 1;
     transition: all 0.2s linear;
     z-index: 1;
-    box-shadow: 0 4px 9px -8px black;
-    left: 0;
-    opacity: 1;
+    right: 0;
+    box-shadow: 0px 0px 1000px 0px black;
   }
 
   .nav-links {

@@ -11,15 +11,15 @@ function Home() {
             textAlign='center'
             fontFamily='Cherry Swash'
             letterSpacing='2px'
-            w='60%'
             m='auto'
             fontSize={{
-              sm: '4.5vw',
+              xs: '6vw',
+              sm: '5vw',
               md: '3.5vw',
               lg: '3vw',
               xl: '2.5vw',
             }}
-            fontWeight='lighter'
+            fontWeight='bold'
           >
             Are you a cheese lover <br />
             and a lasagna fan at the same time?
@@ -29,20 +29,20 @@ function Home() {
             size='sm'
             textAlign='center'
             fontFamily='Cherry Swash'
-            lineHeight='30px'
             letterSpacing='2px'
             my='20px'
-            w='40%'
             m='auto'
             fontSize={{
+              xs: '4vw',
               sm: '3vw',
               md: '2.5vw',
               lg: '2vw',
-              xl: '1vw',
+              xl: '1.5vw',
             }}
             fontWeight='none'
           >
-            Then this one’s for you! Try this classic sweet and savory beef
+            Then this one’s for you! Try this classic sweet and savory beef{' '}
+            <br />
             lasagna topped with overloaded cheese!
           </Heading>
           <Button
@@ -63,10 +63,9 @@ function Home() {
               Order now
             </Text>
           </Button>
-          {/* <Box h='150px' w='auto'>
-            <Image src='/banner.png' m='auto' />
-          </Box> */}
+          <Flex></Flex>
         </Flex>
+        <Box mt='auto' id='about'></Box>
       </Box>
     </>
   )
