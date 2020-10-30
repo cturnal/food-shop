@@ -5,7 +5,7 @@ import Cards from '../components/Cards'
 const prefix = '/food-shop/'
 
 const addToCart = {
-  imageSrc: '/lasagna.jpg',
+  imageSrc: prefix + '/lasagna.jpg',
 }
 
 function Products1() {
@@ -17,7 +17,6 @@ function Products1() {
           backgroud:
             'linear-gradient(#fffaf0, #fffaf050 50%, #fffaf0)' +
             ' url(' +
-            prefix +
             addToCart.imageSrc +
             ')' +
             'fixed',
