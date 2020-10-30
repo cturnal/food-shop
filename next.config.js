@@ -5,6 +5,5 @@
 const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
-  basePath: '/food-shop',
   assetPrefix: !debug ? '/food-shop/' : '',
 }
