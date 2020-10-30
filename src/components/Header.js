@@ -39,7 +39,7 @@ const Shop = () => (
 
 const NavLink = ({ label, path, cName }) => {
   return (
-    <Link href={path} passHref>
+    <Link href={path} as={process.env.BACKEND_URL + path} passHref>
       <PseudoBox
         as='a'
         color='gray.600'
