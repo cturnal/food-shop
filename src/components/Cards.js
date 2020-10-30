@@ -1,7 +1,7 @@
 import { Flex, Box, Text, Image, Divider } from '@chakra-ui/core'
 import Buttons from './Buttons'
 
-const prefix = '/food-shop/#order'
+const prefix = '/food-shop/'
 
 const product = {
   imageUrl: '/lasagna1.jpg',
