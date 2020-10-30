@@ -2,12 +2,14 @@ import { Box, Image } from '@chakra-ui/core'
 import Container from '../components/Container'
 import Headings from '../components/Headings'
 
+const prefix = '/food-shop'
+
 function About() {
   return (
     <>
       <Container>
         <Box flexShrink='0' m='auto' px='20px' w={{ lg: '50%' }} mx='10px'>
-          <Image shadow='2xl' rounded='20px' src='/lasagna.jpg' />
+          <Image shadow='2xl' rounded='20px' src={prefix + '/lasagna.jpg'} />
         </Box>
         <Box m='auto' w={{ xl: '50%' }} mt='50px'>
           <Headings
