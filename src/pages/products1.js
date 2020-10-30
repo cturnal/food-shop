@@ -11,7 +11,7 @@ const addToCart = {
 function Products1() {
   return (
     <>
-      <Container
+      <Box
         style={{
           backgroud:
             'linear-gradient(#fffaf0, #fffaf050 50%, #fffaf0)' +
@@ -26,34 +26,36 @@ function Products1() {
           maxW: '100%',
         }}
       >
-        <Box m='auto'>
-          <Flex
-            flexDirection={{
-              xs: 'column',
-              sm: 'column',
-              md: 'column',
-              lg: 'column',
-              xl: 'row',
-            }}
-          >
-            <Cards />
-            <Cards />
-          </Flex>
-          <Flex
-            m='auto'
-            flexDirection={{
-              xs: 'column',
-              sm: 'column',
-              md: 'column',
-              lg: 'column',
-              xl: 'row',
-            }}
-          >
-            <Cards />
-            <Cards />
-          </Flex>
-        </Box>
-      </Container>
+        <Container>
+          <Box m='auto'>
+            <Flex
+              flexDirection={{
+                xs: 'column',
+                sm: 'column',
+                md: 'column',
+                lg: 'column',
+                xl: 'row',
+              }}
+            >
+              <Cards />
+              <Cards />
+            </Flex>
+            <Flex
+              m='auto'
+              flexDirection={{
+                xs: 'column',
+                sm: 'column',
+                md: 'column',
+                lg: 'column',
+                xl: 'row',
+              }}
+            >
+              <Cards />
+              <Cards />
+            </Flex>
+          </Box>
+        </Container>
+      </Box>
       <Box mt='auto' id='reviews'></Box>
     </>
   )
