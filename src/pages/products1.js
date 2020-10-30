@@ -2,7 +2,7 @@ import { Box, Flex } from '@chakra-ui/core'
 import Container from '../components/Container'
 import Cards from '../components/Cards'
 
-const prefix = '/food-shop/'
+const prefix = '/food-shop'
 
 const addToCart = {
   imageSrc: prefix + '/lasagna.jpg',
@@ -16,7 +16,7 @@ function Products1() {
         style={{
           backgroud:
             'linear-gradient(#fffaf0, #fffaf050 50%, #fffaf0)' +
-            ' url(' +
+            'url(' +
             addToCart.imageSrc +
             ')' +
             'fixed',
