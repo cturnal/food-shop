@@ -1,5 +1,4 @@
 import { Box, Heading, Image, Flex } from '@chakra-ui/core'
-const prefix = '/food-shop'
 
 const Review = ({ image1, image2 }) => (
   <Flex
@@ -7,8 +6,8 @@ const Review = ({ image1, image2 }) => (
     flexDirection={['column', 'column', 'column', 'column', 'row']}
     display='inherit'
   >
-    <Image src={prefix + image1} px={5} />
-    <Image src={prefix + image2} px={5} />
+    <Image src={image1} px={5} />
+    <Image src={image2} px={5} />
   </Flex>
 )
 

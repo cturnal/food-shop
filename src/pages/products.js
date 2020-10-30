@@ -1,7 +1,6 @@
 import { Box, Image, Flex } from '@chakra-ui/core'
 import Container from '../components/Container'
 import Headings from '../components/Headings'
-const prefix = '/food-shop'
 
 const Images = ({ image1, image2 }) => (
   <Flex
@@ -16,7 +15,7 @@ const Images = ({ image1, image2 }) => (
   >
     <Box m='auto' px={2} w={{ lg: '50%' }}>
       <Image
-        src={prefix + image1}
+        src={image1}
         rounded='20px'
         boxShadow='2xl'
         display='inherit'
@@ -25,7 +24,7 @@ const Images = ({ image1, image2 }) => (
     </Box>
     <Box m='auto' px={2} w={{ lg: '50%' }}>
       <Image
-        src={prefix + image2}
+        src={image2}
         rounded='20px'
         boxShadow='2xl'
         display='inherit'

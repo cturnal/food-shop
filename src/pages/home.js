@@ -2,7 +2,6 @@ import { Box, Image } from '@chakra-ui/core'
 import Headings from '../components/Headings'
 import Buttons from '../components/Buttons'
 import Container from '../components/Container'
-const prefix = '/food-shop'
 
 function Home() {
   return (
@@ -17,7 +16,7 @@ function Home() {
           <br /> beef lasagna topped with overloaded cheese!
         </Headings>
         <Buttons as='a' href='#order' label='ORDER NOW' />
-        <Image src={prefix + '/slice.png'} w='150px' m='auto' />
+        <Image src='/slice.png' w='150px' m='auto' />
       </Container>
       <Box mb='100px' id='about'></Box>
     </>

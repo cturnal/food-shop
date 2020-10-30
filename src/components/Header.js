@@ -10,8 +10,8 @@ import {
   MenuButton,
   Text,
 } from '@chakra-ui/core'
-import Link from 'next/link'
 import Headings from './Headings'
+import Link from 'next/link'
 
 const Shop = () => (
   <Menu>

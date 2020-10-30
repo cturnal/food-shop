@@ -1,8 +1,6 @@
 import { Flex, Box, Text, Image, Divider } from '@chakra-ui/core'
 import Buttons from './Buttons'
 
-const prefix = '/food-shop'
-
 const product = {
   imageUrl: '/lasagna1.jpg',
   title: 'LASAGNA',
@@ -29,7 +27,7 @@ function Cards() {
         boxShadow='0px 0px 5px -1px black'
       >
         <Box rounded='20px' alignItems='center' m='auto'>
-          <Image rounded='lg' h='auto' src={prefix + product.imageUrl} />
+          <Image rounded='lg' h='auto' src={product.imageUrl} />
         </Box>
         <Box padding='10px 20px'>
           <Text color='black' as='h3' fontSize='20px' fontWeight='900'>
