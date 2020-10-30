@@ -2,60 +2,38 @@ import { Box, Flex } from '@chakra-ui/core'
 import Container from '../components/Container'
 import Cards from '../components/Cards'
 
-const prefix = '/food-shop'
-
-const addToCart = {
-  imageSrc: prefix + '/lasagna.jpg',
-}
-
 function Products1() {
   return (
     <>
-      <Box
-        style={{
-          backgroud:
-            'linear-gradient(#fffaf0, #fffaf050 50%, #fffaf0)' +
-            'url(' +
-            addToCart.imageSrc +
-            ')' +
-            'fixed',
-          backgroudSize: 'cover',
-          width: '100%',
-          paddingBottom: '150px',
-          position: 'relative',
-          maxW: '100%',
-        }}
-      >
-        <Container>
-          <Box m='auto'>
-            <Flex
-              flexDirection={{
-                xs: 'column',
-                sm: 'column',
-                md: 'column',
-                lg: 'column',
-                xl: 'row',
-              }}
-            >
-              <Cards />
-              <Cards />
-            </Flex>
-            <Flex
-              m='auto'
-              flexDirection={{
-                xs: 'column',
-                sm: 'column',
-                md: 'column',
-                lg: 'column',
-                xl: 'row',
-              }}
-            >
-              <Cards />
-              <Cards />
-            </Flex>
-          </Box>
-        </Container>
-      </Box>
+      <Container cName='add-to-cart'>
+        <Box m='auto'>
+          <Flex
+            flexDirection={{
+              xs: 'column',
+              sm: 'column',
+              md: 'column',
+              lg: 'column',
+              xl: 'row',
+            }}
+          >
+            <Cards />
+            <Cards />
+          </Flex>
+          <Flex
+            m='auto'
+            flexDirection={{
+              xs: 'column',
+              sm: 'column',
+              md: 'column',
+              lg: 'column',
+              xl: 'row',
+            }}
+          >
+            <Cards />
+            <Cards />
+          </Flex>
+        </Box>
+      </Container>
       <Box mt='auto' id='reviews'></Box>
     </>
   )
