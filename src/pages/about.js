@@ -1,72 +1,41 @@
-import { Box, Flex, Heading, Image } from '@chakra-ui/core'
+import { Box, Image } from '@chakra-ui/core'
+import Container from '../components/Container'
+import Headings from '../components/Headings'
 
-function Home() {
+function About() {
   return (
     <>
-      <Box minH='80vh' h='100%' m='auto' w='90%' pt='90px'>
-        <Flex flexDirection={['column', 'column', 'column', 'row', 'row']}>
-          <Flex flexDirection='column' pt='50px' m='auto'>
-            <Flex
-              m='auto'
-              pb='70px'
-              flexDirection={['column', 'column', 'row', 'row', 'row']}
-            >
-              <Box
-                maxW='90%'
-                h='auto'
-                rounded='20px'
-                overflow='hidden'
-                boxShadow='2xl'
-                m='auto'
-              >
-                <Image src='/lasagna.jpg' display='inherit' />
-              </Box>
-            </Flex>
-          </Flex>
-          <Box
-            pb='50px'
-            my='auto'
-            width={[
-              '100%', // base
-              '100%', // 480px upwards
-              '100%',
-              '50%', // 768px upwards
-              '50%', // 992px upwards
-            ]}
+      <Container>
+        <Box flexShrink='0' m='auto' px='20px' w={{ lg: '50%' }} mx='10px'>
+          <Image shadow='2xl' rounded='20px' src='/lasagna.jpg' />
+        </Box>
+        <Box m='auto' w={{ xl: '50%' }} mt='50px'>
+          <Headings
+            fontSize='5vw'
+            fontWeight='900'
+            letterSpacing='5px'
+            textAlign={{ xs: 'center', sm: 'center', lg: 'left', xl: 'left' }}
+            label='About Us'
+          />
+          <Headings
+            fontSize='1rem'
+            fontWeight='none'
+            letterSpacing='2px'
+            textAlign={['center', 'center', 'center', 'left', 'left']}
+            lineHeight='30px'
+            mt='20px'
           >
-            <Heading
-              textAlign={['center', 'center', 'center', 'left', 'left']}
-              fontFamily='Cherry Swash'
-              fontSize='5vw'
-              fontWeight='900'
-              letterSpacing='5px'
-            >
-              About Us
-              <br />
-            </Heading>
-            <Heading
-              mt='20px'
-              lineHeight='30px'
-              letterSpacing='2px'
-              as='h6'
-              size='sm'
-              textAlign={['center', 'center', 'center', 'left', 'left']}
-              fontFamily='Cherry Swash'
-              fontSize='1rem'
-              fontWeight='none'
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              sagittis pretium massa, ac pellentesque augue bibendum sit amet.
-              Duis placerat ornare suscipit. Nunc nec velit dictum, auctor
-              lectus vel, imperdiet dui. Class aptent taciti sociosqu ad litora
-              torquent per conubia nostra, per inceptos himenaeos. Pellentesque
-            </Heading>
-          </Box>
-          <Box mt='auto' id='products'></Box>
-        </Flex>
-      </Box>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            sagittis pretium massa, ac pellentesque augue bibendum sit amet.
+            Duis placerat ornare suscipit. Nunc nec velit dictum, auctor lectus
+            vel, imperdiet dui. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos himenaeos. Pellentesque'
+          </Headings>
+        </Box>
+      </Container>
+      <Box mt='auto' id='products'></Box>
     </>
   )
 }
 
-export default Home
+export default About

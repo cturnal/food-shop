@@ -1,5 +1,4 @@
 import { Box, Flex } from '@chakra-ui/core'
-import Container from './Container'
 
 function Footer() {
   return (
@@ -8,10 +7,12 @@ function Footer() {
         <Flex
           float='bottom'
           h='80px'
-          bg='gray.900'
+          bg='black'
           align='center'
           justifyContent='center'
-          my={5}
+          mt={5}
+          mb='0px'
+          pb='0px'
           color='white'
         >
           Copyright &copy; Noemi's Lasagna

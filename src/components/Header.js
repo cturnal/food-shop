@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
 import {
   Flex,
-  Heading,
   Box,
   PseudoBox,
   Button,
@@ -12,47 +10,23 @@ import {
   MenuButton,
   Text,
 } from '@chakra-ui/core'
-import Container from './Container'
 import Link from 'next/link'
-
-const routes = [
-  {
-    path: '#home',
-    label: 'Home',
-  },
-  {
-    path: '#about',
-    label: 'About',
-  },
-  {
-    path: '#products',
-    label: 'Products',
-  },
-  ,
-  {
-    path: '#reviews',
-    label: 'Reviews',
-  },
-]
+import Headings from './Headings'
 
 const Shop = () => (
   <Menu>
     <MenuButton
-      pl={2}
       as={Button}
-      bg='none !important'
-      _hover={{
-        bg: 'none !important',
-      }}
-      _active={{
-        border: 'none !important',
-      }}
+      bg='transparent !important'
+      border='transparent !important'
       _focus={{
-        outline: 'none !important',
+        outline: 'transparent !important',
       }}
+      pr='0px'
+      color='black'
     >
       <i className='fas fa-shopping-cart fa-lg' pr={1}></i>
-      <Text className='mobile-shop' ml={1} fontFamily='Cherry Swash'>
+      <Text className='mobile-shop' ml={1}>
         My Cart
       </Text>
     </MenuButton>
@@ -63,16 +37,12 @@ const Shop = () => (
   </Menu>
 )
 
-const NavLink = ({ label, path, focus }) => {
+const NavLink = ({ label, path, cName }) => {
   return (
     <Link href={path} passHref>
       <PseudoBox
-        className='nav-links'
         as='a'
         color='gray.600'
-        borderRadius='sm'
-        fontWeight='bold'
-        margin='0 auto'
         py={3}
         fontSize='15px'
         fontWeight='500'
@@ -80,16 +50,9 @@ const NavLink = ({ label, path, focus }) => {
         mx='9px'
         _hover={{
           borderBottom: '2px solid black',
-          color: 'gray.900',
-          margin: '0 auto',
-          mx: '9px',
-        }}
-        _focusWithin={{
-          borderBottom: '3px solid black',
-          margin: '0 auto',
           color: 'black',
-          mx: '9px',
         }}
+        className={cName}
       >
         {label}
       </PseudoBox>
@@ -111,25 +74,24 @@ function Header() {
   return (
     <Box mb='180px' id='home'>
       <Flex
+        pl='70px'
         className={scroll ? 'hidden' : 'fb-like'}
-        w='100%'
         height='40px'
-        bg='gray.900'
+        bg='black'
         align='center'
         color='white'
       >
-        <Flex mr='auto' ml='70px'>
-          <a href='https://www.facebook.com/noemislasagna' target='_blank'>
-            <i className='fab fa-facebook-square fa-lg '></i>
-            Like us on facebook!
-          </a>
-        </Flex>
+        <a href='https://www.facebook.com/noemislasagna' target='_blank'>
+          <i className='fab fa-facebook-square fa-lg '></i>
+          Like us on facebook!
+        </a>
       </Flex>
-      <Container
-        bg='#FFFAF0'
+      <Box
+        maxW='1900px'
         w='100%'
+        bg='#FFFAF0'
         position='fixed'
-        pt='50px'
+        pt='40px'
         zIndex='1'
         className={scroll ? 'scrolled' : 'scroll'}
       >
@@ -138,9 +100,7 @@ function Header() {
           h='120px'
           align='center'
           mx='50px'
-          flexWrap='nowrap'
           justifyContent='space-between'
-          flexDirection='row'
         >
           <Flex className='menu' mr='-150px'>
             <PseudoBox className='menu-icon' onClick={handleClick} pt={1}>
@@ -149,55 +109,49 @@ function Header() {
               ></i>
             </PseudoBox>
             <Box className={click ? 'nav-menu active' : 'nav-menu'}>
-              {routes.map((route) => (
-                <NavLink {...route} key={route.path} />
-              ))}
+              <NavLink
+                label='Home'
+                path='#home'
+                cName={scroll <= 599 ? 'active-link' : 'inactive'}
+              />
+              <NavLink
+                label='About'
+                path='#about'
+                cName={
+                  scroll > 600 && scroll <= 1499 ? 'active-link' : 'inactive'
+                }
+              />
+              <NavLink
+                label='Products'
+                path='#products'
+                cName={
+                  scroll > 1500 && scroll <= 2899 ? 'active-link' : 'inactive'
+                }
+              />
+              <NavLink
+                label='Reviews'
+                path='#reviews'
+                cName={scroll > 2900 ? 'active-link' : 'inactive'}
+              />
             </Box>
           </Flex>
-
-          <Box>
-            <Heading
-              className='logo'
-              as='h1'
-              size='xl'
-              textTransform='none'
-              pr='20px'
-              fontFamily='Cherry Swash'
-            >
-              <Flex
-                flexDirection='column'
-                align='center'
-                justifyContent='center'
-              >
-                <Heading
-                  as='h5'
-                  size={scroll ? 'sm' : 'lg'}
-                  textTransform='none'
-                  fontFamily='Cherry Swash'
-                >
-                  Noemi's
-                </Heading>
-
-                <Flex>
-                  <i className='fas fa-utensils'></i>
-                  Lasagna
-                </Flex>
-                <Heading
-                  as='h5'
-                  size={scroll ? 'xs' : 'sm'}
-                  textTransform='uppercase'
-                >
-                  est. 2020
-                </Heading>
+          <Headings cName='logo'>
+            <Flex flexDirection='column' align='center' justifyContent='center'>
+              <Headings size={scroll ? 'md' : 'lg'} label="Noemi's" />
+              <Flex>
+                <i className='fas fa-utensils'></i>
+                Lasagna
               </Flex>
-            </Heading>
-          </Box>
-
-          <Box>
-            <Shop />
-          </Box>
+              <Headings
+                size={scroll ? 'xs' : 'sm'}
+                fontFamily='Segoe UI !important'
+                label='EST. 2020'
+              />
+            </Flex>
+          </Headings>
+          <Shop />
         </Flex>
-      </Container>
+      </Box>
     </Box>
   )
 }

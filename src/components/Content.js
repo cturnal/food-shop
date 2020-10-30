@@ -5,34 +5,32 @@ import Products from '../pages/products'
 import Products1 from '../pages/products1'
 import Reviews from '../pages/reviews'
 
+const ContentDivider = ({ margin }) => {
+  return (
+    <>
+      <Divider
+        borderColor='black'
+        w='70%'
+        m='auto'
+        boxShadow='1px 1px 5px 0px black'
+        mt={margin}
+      />
+    </>
+  )
+}
+
 function Content() {
   return (
     <>
       <Flex flexDirection='column'>
         <Home />
-        <Divider
-          borderColor='gray.900'
-          w='70%'
-          m='auto'
-          boxShadow='1px 1px 5px 0px black'
-        />
+        <ContentDivider />
         <About />
-        <Divider
-          borderColor='gray.900'
-          w='70%'
-          m='auto'
-          boxShadow='1px 1px 5px 0px black'
-        />
+        <ContentDivider />
         <Products />
-
+        <ContentDivider />
         <Products1 />
-        <Divider
-          borderColor='gray.900'
-          w='70%'
-          m='auto'
-          boxShadow='1px 1px 5px 0px black'
-          mt='50px !important'
-        />
+        <ContentDivider margin='50px !important' />
         <Reviews />
       </Flex>
     </>
