@@ -12,7 +12,6 @@ function Products1() {
   return (
     <>
       <Container
-        cName='add-to-cart'
         style={{
           backgroud:
             'linear-gradient(#fffaf0, #fffaf050 50%, #fffaf0)' +
