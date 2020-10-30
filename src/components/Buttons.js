@@ -1,5 +1,6 @@
 import { Button, Text } from '@chakra-ui/core'
 
+
 const Buttons = ({ label, ...rest }) => (
   <Button
     variant='solid'
